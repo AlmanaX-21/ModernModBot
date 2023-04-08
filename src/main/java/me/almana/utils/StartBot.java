@@ -8,6 +8,7 @@ import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 
 public class StartBot extends ListenerAdapter {
 
@@ -20,6 +21,7 @@ public class StartBot extends ListenerAdapter {
         JDA jda = JDABuilder.createDefault(token)
                 .setStatus(OnlineStatus.ONLINE)
                 .setActivity(Activity.watching("you"))
+                .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .addEventListeners(this)
                 .addEventListeners(new TstMsgCmds())
                 .build().awaitReady();

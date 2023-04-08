@@ -40,8 +40,9 @@ public class Main {
 
     private static void test() {
 
-        ModernServer testServer = new ModernServer(931399413081968670L, List.of(931406972274757773L),
-                List.of(new ReportOption("Bruh", Emoji.fromUnicode("\\uD83D\\uDCD7"), ReportSeverity.HIGH)));
+        ModernServer testServer = new ModernServer(931399413081968670L, List.of(931406972274757773L)
+                , List.of(new ReportOption("Bruh", Emoji.fromUnicode("\\uD83D\\uDCD7"), ReportSeverity.HIGH)),
+                964112139239424040L);
 
         serverInfos.put(931399413081968670L, testServer);
     }
