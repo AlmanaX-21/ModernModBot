@@ -13,7 +13,7 @@ public class ReportOption {
 
     public ReportOption(String reportType, ReportSeverity severity) {
         this.reportType = reportType;
-        this.reportIcon = Emoji.fromUnicode("\\uD83D\\uDD34");
+        this.reportIcon = Emoji.fromUnicode("\\uF7E5");
         this.severity = severity;
     }
 

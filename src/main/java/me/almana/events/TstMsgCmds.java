@@ -27,7 +27,7 @@ public class TstMsgCmds extends ListenerAdapter {
             channel.sendMessage("Guild puntype: " + serverInfo.get(event.getGuild().getIdLong()).getReportOptions().get(0).getReportType()).queue();
         } else if (event.getMessage().getContentRaw().contains("reportOptions")) {
 
-            jda.getGuildById(931399413081968670L).updateCommands().addCommands(Commands.slash("showreportoptions", "Report options!")).queue();
+            event.getGuild().updateCommands().addCommands(Commands.slash("showreportoptions", "Report options!")).queue();
         }
     }
 }
